@@ -6,17 +6,47 @@ public class SlotMachine {
 
     private Random random = new Random();
 
+    // Attributes
+    private int wheels = 3; // Number of wheels
+    private int symbols = 5; // Number of symbols
+
     enum Fruit {
         SEVEN,
         CHERRY,
         ORANGE,
         LEMON,
-        GRAPE
+        GRAPE,
+        BANANA,
+        APPLE,
+        PEAR,
+        STRAWBERRY,
+        WATERMELON,
+        PINEAPPLE,
+        PEACH,
+        PLUM,
+        COCONUT,
+        MANGO,
+        PAPAYA,
+        GUAVA,
+        POMEGRANATE,
+        LYCHEE,
+        KIWI,
+        PASSIONFRUIT,
+        DRAGONFRUIT,
+        STARFRUIT,
+        JACKFRUIT,
+        RAMBUTAN,
+        DURIAN,
+        MANGOSTEEN,
+        LONGAN,
+        SALAK,
+        CUSTARDAPPLE,
+        SUGARCANE
     }
 
     // Spinner method
     public Fruit spin() {
-        int pick = random.nextInt(Fruit.values().length);
+        int pick = random.nextInt(symbols);
         return Fruit.values()[pick];
     }
 
